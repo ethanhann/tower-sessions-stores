@@ -5,15 +5,15 @@ edition = "2021"
 publish = false
 
 [dev-dependencies]
-axum = "0.7"
+axum = "0.8.0-alpha.1"
 http = "1.0"
 http-body-util = "0.1"
 hyper = "1.0"
 time = "0.3.30"
 tokio = { version = "1", features = ["full"] }
-tower = { version = "0.4.13", features = ["util"] }
+tower = { version = "0.5.1", features = ["util"] }
 tower-cookies = "0.10.0"
-tower-sessions = "0.13.0"
+tower-sessions = { git = "https://github.com/ethanhann/tower-sessions.git", branch = "chore/upgrade_to_axum_core_0_5_x" }
 tower-sessions-sqlx-store = { path = "../sqlx-store/", features = [
     "sqlite",
     "mysql",
